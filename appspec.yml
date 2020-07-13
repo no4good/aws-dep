@@ -13,7 +13,6 @@ permissions:
 hooks:
   BeforeInstall:
     - location: scripts/before-install.sh
-  CreateEnv:
     - location: create.sh
   ApplicationStart:
     - location: scripts/app-start.sh
