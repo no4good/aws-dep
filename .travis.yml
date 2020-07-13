@@ -14,12 +14,12 @@ deploy:
   skip_cleanup: true
   on: &2
     repo: no4good/aws-dep
-  bucket: travisnato
+  bucket: traviscicd
   region: us-east-2
 - provider: codedeploy
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  bucket: travisnato
+  bucket: traviscicd
   key: latest.zip
   bundle_type: zip
   application: nato
