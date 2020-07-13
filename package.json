@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo ",
+    "test": "echo sdasd",
     "server": "nodemon server.js",
     "start": "node server.js",
     "lint": "eslint --fix \"**/*.js\"",
