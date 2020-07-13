@@ -35,5 +35,5 @@ script:
   - mkdir -p dpl_cd_upload
   - aws configure list
   - aws s3 ls
-  -aws s3 ls s3://traviscicd
+  - aws s3 ls s3://traviscicd
   - mv latest.zip dpl_cd_upload/latest.zip
