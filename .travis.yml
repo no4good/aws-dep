@@ -37,6 +37,5 @@ script:
   - aws s3 cp s3://traviscicd/.env ./
   - ls -la
   - zip -r latest * >/dev/null
-  - cat latest.zip
   - mkdir -p dpl_cd_upload
   - mv latest.zip dpl_cd_upload/latest.zip
