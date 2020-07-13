@@ -1,3 +1,4 @@
 #!/bin/bash
 cd /home/ubuntu/nato
-npm run start
+pm2 delete all
+pm2 start server.js
