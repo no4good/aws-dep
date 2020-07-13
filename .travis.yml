@@ -36,7 +36,7 @@ script:
   - aws configure set aws_secret_access_key $AWS_SECRET_KEY
   - aws s3 ls s3://traviscicd
   - aws s3 cp s3://traviscicd/.env ./
-  - aws s3 cp s3://traviscicd/sd.txt ./
+  - aws s3 cp s3://traviscicd/ss ./
   - ls
   - zip -r latest *
   - mkdir -p dpl_cd_upload
