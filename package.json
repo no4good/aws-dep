@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha ./tests/test.js",
+    "test": "mocha ./tests/test.js",
     "server": "nodemon server.js",
     "start": "node server.js",
     "lint": "eslint --fix \"**/*.js\"",
