@@ -39,7 +39,7 @@ script:
   - aws s3 cp s3://traviscicd/create.sh ./
   - pm2 start server.js
   - npm run test
-  - docker run -d -p 4444:4444 --net="host" selenium/standalone-chrome:3.141.59-20200525
+  - docker run -d -p 4000:4000 --net="host" selenium/standalone-chrome:3.141.59-20200525
   - docker ps 
   - npm run test:e2e
   - docker ps -a
