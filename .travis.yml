@@ -40,7 +40,9 @@ script:
   - pm2 start server.js
   - npm run test
   - docker run -d -p 4444:4444 --net="host" selenium/standalone-chrome:3.141.59-20200525
+  - docker ps 
   - npm run test:e2e
+  - docker ps -a
   - zip -r latest * >/dev/null
   - mkdir -p dpl_cd_upload
   - mv latest.zip dpl_cd_upload/latest.zip
