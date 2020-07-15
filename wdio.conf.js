@@ -1,7 +1,7 @@
 exports.config = {
   runner: 'local',
   path: '/wd/hub',
-  port: 4000,
+  port: 4444,
   specs: ['e2e/specs/**.spec.js'],
 
   capabilities: [
