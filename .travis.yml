@@ -10,6 +10,7 @@ cache:
     - node_modules
 install:
    - npm install
+   - npm install pm2
 deploy:
 - provider: s3
   access_key_id: $AWS_ACCESS_KEY
@@ -35,7 +36,8 @@ script:
   - aws configure set aws_access_key_id $AWS_ACCESS_KEY
   - aws configure set aws_secret_access_key $AWS_SECRET_KEY
   - aws s3 cp s3://traviscicd/create.sh ./
-  - ls -la
+  - pm2 start server.js
+  - npm run test
   - zip -r latest * >/dev/null
   - mkdir -p dpl_cd_upload
   - mv latest.zip dpl_cd_upload/latest.zip

@@ -19,6 +19,10 @@ class MessageRepository {
   create(data) {
     return this.message.create(data);
   }
+
+  delete(id) {
+    return this.message.findByIdAndDelete(id);
+  }
 }
 
 module.exports = new MessageRepository(MessageModel);

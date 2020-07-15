@@ -15,6 +15,10 @@ router
   .post('/', (req, res, next) => messagesService
     .createMessage(req.body)
     .then((data) => res.send(data))
+    .catch(next))
+  .delete('/:id', (req, res, next) => messagesService
+    .deleteMessageById(req.params.id)
+    .then((data) => res.send(data))
     .catch(next));
 
 module.exports = router;

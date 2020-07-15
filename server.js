@@ -23,9 +23,9 @@ mongoose
     console.error('Unable to connect to the database:', err);
   });
 
-app.get('/', function (req, res) {
-  res.send('GET request to the homepage')
-})
+app.get('/', (req, res) => {
+  res.send('GET request to the homepage');
+});
 
 routes(app);
 app.use(errorHandlerMiddleware);

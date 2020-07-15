@@ -41,8 +41,19 @@ const createMessage = async ({ email, text }) => {
   return result;
 };
 
+const deleteMessageById = async (messageId) => {
+  const message = await messageRepository.delete(messageId);
+  if (!message || undefined) {
+    const error = new Error('Message  not found');
+    error.status = 404;
+    return Promise.reject(error);
+  }
+  return 'Message deleted';
+};
+
 module.exports = {
   getMessageById,
   getMessageList,
   createMessage,
+  deleteMessageById,
 };
